@@ -1,0 +1,17 @@
+# Badminton Form Correction - Requirements
+
+## Core Dependencies
+mediapipe==0.10.21
+opencv-python==4.7.0.72
+numpy==1.24.3
+
+## Development and Testing
+pytest==7.3.1
+pylint==2.17.4
+
+## Optional: Future Enhancements
+matplotlib==3.7.1  # For potential advanced visualizations
+pandas==2.0.1      # For data logging and analysis
+
+## System Requirements
+# Python 3.10.x
