@@ -1,86 +1,40 @@
-# Badminton Smash Form Correction Application
+# 🏸 AI Overhead Smash Form Coach
 
-## Overview
+An AI-powered **badminton smash analysis tool** that provides real-time feedback on player form using **MediaPipe and OpenCV**. This tool helps players **improve their smash technique** by analyzing body angles, tracking racket motion, and saving training videos with overlaid feedback.
 
-This AI-powered application uses computer vision and pose estimation to help badminton players improve their smash technique through real-time form analysis. By leveraging MediaPipe's pose estimation technology, the application provides immediate feedback on shoulder and elbow positioning during a smash motion.
+## 🚀 Features
 
-## Features
+✅ **Real-time form analysis** (shoulder, elbow, knee angles)
+✅ **Racket motion tracking** using color detection (red/blue grip)
+✅ **Personalized feedback** displayed on-screen
+✅ **Video recording** with feedback overlay for review
+✅ **Side-view camera analysis** (single camera setup)
 
-- Real-time pose estimation
-- Angle calculation for shoulder and elbow joints
-- Smash form quality scoring (0-100)
-- Personalized technique feedback
-- Webcam-based analysis without requiring jumping
+## 📂 Installation
 
-## Prerequisites
-
-### System Requirements
-
-- Python 3.10.x
-- Windows 10/11 or macOS
-- Webcam
-
-### Required Dependencies
-
-- MediaPipe
-- OpenCV
-- NumPy
-
-## Installation
-
-1. Clone the repository:
+Make sure you have Python installed, then install the required dependencies:
 
 ```bash
-git clone https://github.com/yourusername/badminton-form-correction.git
-cd badminton-form-correction
+pip install opencv-python mediapipe numpy
 ```
 
-2. Create a virtual environment:
+## 🎮 Usage
 
-```bash
-python -m venv badminton_pose
-source badminton_pose/bin/activate  # Unix/macOS
-badminton_pose\Scripts\activate     # Windows
-```
+1. **Run the script:**
 
-3. Install dependencies:
+   ```bash
+   python badminton_smash_ai.py
+   ```
 
-```bash
-pip install -r requirements.txt
-```
+2. **Position the camera** to capture a **side view** of your smash.
+3. **Use a racket with a red or blue grip** for tracking.
+4. **Perform an overhead smash.**
+5. **Receive real-time feedback** on your form.
+6. **Press 'Q' to exit** and review the saved video (`smash_analysis.avi`).
 
-## Usage
+## 📊 How It Works
 
-Run the application:
-
-```bash
-python main.py
-```
-
-### Interaction
-
-- Position yourself in front of the webcam
-- Perform a stationary smash motion
-- Receive real-time form feedback
-- Press 'q' to exit the application
-
-## Performance Considerations
-
-- Ensure good lighting conditions
-- Wear contrasting clothing for better landmark detection
-- Perform motion in a clear, unobstructed space
-
-## Future Improvements
-
-- Multi-angle form analysis
-- Saved performance logs
-- Personalized player profiles
-- Advanced machine learning insights
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit changes
-4. Push to the branch
-5. Create a pull request
+- **Pose Detection:** Uses **MediaPipe** to analyze joint angles (elbow, shoulder, knee).
+- **Racket Tracking:** Detects racket motion based on **color filtering**.
+- **Form Feedback:** Compares joint angles to ideal values and provides **corrections**.
+- **Video Saving:** Records the session with **feedback overlay**.
